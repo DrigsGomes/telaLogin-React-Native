@@ -7,19 +7,22 @@ import {
   TouchableOpacity
 } from 'react-native';
 
+import * as Animatable from 'react-native-animatable';
+
 export default function Welcome() {
  return (
    <View style={styles.container}>
 
      <View style={styles.containerLogo}>
-       <Image
-       source={require('../../assets/logo.png')}
+       <Animatable.Image
+       animation="flipInY"
+       source={require('../../assets/favicon.png')}
        style={{ width: '100%'}}
        resizeMode='contain'
        />
      </View>
 
-     <View style={styles.containerForm}>
+     <Animatable.View delay={600} animation="fadeInUp" style={styles.containerForm}>
        <Text style={styles.title}> Monitore e organize seus gastos de qualquer lugar!</Text>
        <Text style={styles.text}> Faça o login para começar</Text>
 
@@ -27,7 +30,7 @@ export default function Welcome() {
          <Text style={styles.buttonText}> Acessar</Text>
        </TouchableOpacity>
 
-     </View>
+     </Animatable.View>
 
    </View>
   );
