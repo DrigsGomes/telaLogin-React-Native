@@ -65,6 +65,39 @@ const styles = StyleSheet.create({
     backgroundColor:'#FFF',
     flex:1, 
     borderTopLeftRadius: 25,
-    borderTopRightRadius:25
+    borderTopRightRadius:25,
+    paddingStart:'5%',
+    paddingEnd: '5%'
+  },
+  title:{
+    fontSize:20,
+    marginTop:28
+  },
+  input:{
+    borderBottomWidth:1,
+    height:40,
+    marginTop:14,
+    fontSize:16
+  },
+  button:{
+    backgroundColor:'#38A69D',
+    width:'100%',
+    borderRadius:4,
+    paddingVertical:8,
+    margintop:14,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  buttonText:{
+    color:'#FFF',
+    fontSize:18,
+    fontWeight:'bold'
+  },
+  buttonRegister:{
+    marginTop:14,
+    alignSelf:'center'
+  },
+  registerTex:{
+    color:'#A1A1A1'
   }
 })
