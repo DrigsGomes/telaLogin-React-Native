@@ -9,14 +9,19 @@ import {
 
 import * as Animatable from 'react-native-animatable';
 
+import {useNavigation} from '@react-navigation/native'
+
 export default function Welcome() {
+
+  const navigation = useNavigation();
+
  return (
    <View style={styles.container}>
 
      <View style={styles.containerLogo}>
        <Animatable.Image
        animation="flipInY"
-       source={require('../../assets/favicon.png')}
+       source={require("../../assets/logo.png")}
        style={{ width: '100%'}}
        resizeMode='contain'
        />
@@ -26,7 +31,10 @@ export default function Welcome() {
        <Text style={styles.title}> Monitore e organize seus gastos de qualquer lugar!</Text>
        <Text style={styles.text}> Faça o login para começar</Text>
 
-       <TouchableOpacity style={styles.button}>
+       <TouchableOpacity
+        style={styles.button}
+        onPress={ () => navigation.navigate('SingIn')}
+        >
          <Text style={styles.buttonText}> Acessar</Text>
        </TouchableOpacity>
 
